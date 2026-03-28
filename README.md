@@ -36,7 +36,7 @@ npm run build
 ## Contact
 
 - GitHub: https://github.com/rousanraahat
-- Email: hello@rousanraahat.com
+- Email: rousanraahat@gmail.com
 
 ## License
 

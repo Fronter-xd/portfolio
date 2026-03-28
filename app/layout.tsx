@@ -4,6 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Rousan Raahat | AI Developer & Builder',
   description: 'Solo founder building AI-powered products. Portfolio of 7 production-ready projects including lead generation, RAG chatbots, voice AI, and 3D visualizations.',
+  contact: 'rousanraahat@gmail.com',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
