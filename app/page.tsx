@@ -110,7 +110,7 @@ export default function Home() {
 
           <div className="flex justify-center gap-4">
             <a 
-              href="https://github.com/rousanraahat" 
+              href="https://github.com/Fronter-xd" 
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-[#00ff88] text-black font-semibold rounded-lg hover:bg-[#00cc6a] transition-colors"
