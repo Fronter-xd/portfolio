@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import emailjs from '@emailjs/browser'
 
 const projectTypes = [
   'Apex-Lead-Gen',
@@ -14,6 +15,10 @@ const projectTypes = [
   'Others'
 ]
 
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -23,35 +28,23 @@ export default function Contact() {
     message: ''
   })
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const formRef = useRef<HTMLFormElement>(null)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setStatus('sending')
 
     try {
-      // Send to Formspree or your preferred service
-      const response = await fetch('https://formspree.io/f/rousanraahat@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          projectType: formData.projectType,
-          budget: formData.budget,
-          message: formData.message,
-        }),
-      })
-
-      if (response.ok) {
-        setStatus('success')
-        setFormData({ name: '', email: '', projectType: '', budget: '', message: '' })
-      } else {
-        setStatus('error')
-      }
-    } catch {
-      // Fallback: Open mailto with form data
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current!,
+        EMAILJS_PUBLIC_KEY
+      )
+      setStatus('success')
+      setFormData({ name: '', email: '', projectType: '', budget: '', message: '' })
+    } catch (error) {
+      // Fallback to mailto if EmailJS fails
       const subject = encodeURIComponent(`Project Inquiry: ${formData.projectType}`)
       const body = encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\nBudget: ${formData.budget}\n\nMessage:\n${formData.message}`
@@ -109,7 +102,7 @@ export default function Contact() {
               </button>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-[#111] rounded-2xl p-8 border border-[#222]">
+            <form ref={formRef} onSubmit={handleSubmit} className="bg-[#111] rounded-2xl p-8 border border-[#222]">
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-white font-medium mb-2">Your Name</label>
@@ -143,7 +136,7 @@ export default function Contact() {
                   <label htmlFor="projectType" className="block text-white font-medium mb-2">Project Type</label>
                   <select
                     id="projectType"
-                    name="projectType"
+                    name="project_type"
                     required
                     value={formData.projectType}
                     onChange={handleChange}
@@ -199,7 +192,7 @@ export default function Contact() {
 
               {status === 'error' && (
                 <p className="text-red-400 text-center mt-4">
-                  Something went wrong. Please try again or email directly.
+                  Something went wrong. Please try again.
                 </p>
               )}
             </form>
