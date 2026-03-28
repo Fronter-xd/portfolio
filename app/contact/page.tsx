@@ -15,9 +15,9 @@ const projectTypes = [
   'Others'
 ]
 
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'
+const EMAILJS_SERVICE_ID = 'service_jfwmb79'
+const EMAILJS_TEMPLATE_ID = 'template_x308egr'
+const EMAILJS_PUBLIC_KEY = 'aSewlw9M_Xf8jI40-'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
