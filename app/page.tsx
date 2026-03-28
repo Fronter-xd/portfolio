@@ -177,7 +177,7 @@ export default function Home() {
             Need AI-powered solutions? Let's discuss your project.
           </p>
           <a 
-            href="mailto:hello@rousanraahat.com"
+            href="mailto:rousanraahat@gmail.com"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#00ff88] text-black font-semibold rounded-lg hover:bg-[#00cc6a] transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
