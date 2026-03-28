@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { projects } from '@/lib/projects'
 
 function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {
@@ -113,7 +114,7 @@ export default function Home() {
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/rousanraahat"
+              href="https://www.linkedin.com/in/rousan-raahat-610424224/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-[#0077b5] text-white font-semibold rounded-lg hover:bg-[#006097] transition-colors"
@@ -127,19 +128,17 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="https://github.com/Fronter-xd"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#projects"
               className="px-6 py-3 bg-[#00ff88] text-black font-semibold rounded-lg hover:bg-[#00cc6a] transition-colors"
             >
               View All Projects
             </a>
-            <a 
-              href="mailto:rousanraahat@gmail.com?subject=Project%20Inquiry&body=Hi%20Rousan,%20I%20would%20like%20to%20discuss%20a%20project..."
+            <Link 
+              href="/contact"
               className="px-6 py-3 border border-[#00ff88]/50 text-[#00ff88] font-semibold rounded-lg hover:bg-[#00ff88]/10 transition-colors"
             >
               Start a Project
-            </a>
+            </Link>
           </div>
         </motion.header>
 
@@ -161,6 +160,17 @@ export default function Home() {
             <div className="text-4xl font-bold gradient-text mb-2">$10K</div>
             <div className="text-gray-400">30-Day Goal</div>
           </div>
+        </motion.section>
+
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="text-center mb-8"
+        >
+          <Link href="/about">
+            <span className="text-[#00ff88] hover:underline cursor-pointer">Learn more about me →</span>
+          </Link>
         </motion.section>
 
         <section id="projects">
@@ -194,15 +204,15 @@ export default function Home() {
             Have a project in mind? Let&apos;s discuss how we can work together to bring your ideas to life.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="mailto:rousanraahat@gmail.com?subject=Project%20Inquiry&body=Hi%20Rousan,%20I%20would%20like%20to%20discuss%20a%20project..."
+            <Link 
+              href="/contact"
               className="flex items-center gap-2 px-8 py-4 bg-[#00ff88] text-black font-bold rounded-lg hover:bg-[#00cc6a] transition-colors text-lg"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               Start Your Project
-            </a>
+            </Link>
             <a 
               href="https://github.com/Fronter-xd"
               target="_blank"
@@ -238,7 +248,7 @@ export default function Home() {
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/rousanraahat"
+              href="https://www.linkedin.com/in/rousan-raahat-610424224/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-3 bg-[#0077b5] text-white rounded-lg hover:bg-[#006097] transition-colors"
@@ -248,15 +258,15 @@ export default function Home() {
               </svg>
               LinkedIn
             </a>
-            <a 
-              href="mailto:rousanraahat@gmail.com"
+            <Link 
+              href="/contact"
               className="flex items-center gap-2 px-5 py-3 bg-[#00ff88] text-black rounded-lg hover:bg-[#00cc6a] transition-colors font-semibold"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Email
-            </a>
+              Contact
+            </Link>
           </div>
           
           <div className="text-gray-500 text-sm">
