@@ -17,16 +17,17 @@ export default function About() {
 
           <div className="bg-[#0d0d0d] rounded-2xl p-8 border border-[#1a1a1a] mb-8">
             <div className="flex flex-col md:flex-row items-center gap-6 mb-10 pb-10 border-b border-[#1a1a1a]">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#00ff88]/30 shadow-lg shadow-[#00ff88]/20 relative">
+              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#00ff88]/40 shadow-lg shadow-[#00ff88]/20 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&h=200&fit=crop&crop=faces" 
-                  alt="AI Avatar" 
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop&crop=faces" 
+                  alt="Rousan Raahat - Developer" 
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
                 <div className="absolute bottom-1 right-1">
-                  <div className="w-5 h-5 bg-[#00ff88] rounded-full flex items-center justify-center">
+                  <div className="w-5 h-5 bg-[#00ff88] rounded-full flex items-center justify-center shadow-lg shadow-[#00ff88]/50">
                     <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
                     </svg>
                   </div>
                 </div>
