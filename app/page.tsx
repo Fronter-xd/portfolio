@@ -146,7 +146,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16"
         >
           <div className="bg-[#111] rounded-xl p-6 border border-[#222] text-center">
             <div className="text-4xl font-bold gradient-text mb-2">{projects.length}</div>
@@ -156,10 +156,7 @@ export default function Home() {
             <div className="text-4xl font-bold gradient-text mb-2">100%</div>
             <div className="text-gray-400">Production Ready</div>
           </div>
-          <div className="bg-[#111] rounded-xl p-6 border border-[#222] text-center">
-            <div className="text-4xl font-bold gradient-text mb-2">$10K</div>
-            <div className="text-gray-400">30-Day Goal</div>
-          </div>
+
         </motion.section>
 
         <motion.section

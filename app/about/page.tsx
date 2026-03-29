@@ -80,12 +80,12 @@ export default function About() {
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold text-white mb-4">Current Goal</h2>
+                <h2 className="text-2xl font-bold text-white mb-4">Focus</h2>
                 <div className="bg-gradient-to-r from-[#00ff88]/10 to-[#8b5cf6]/10 rounded-xl p-6 border border-[#00ff88]/20">
-                  <p className="text-2xl font-bold gradient-text mb-2">$10K in 30 Days</p>
+                  <p className="text-2xl font-bold gradient-text mb-2">Building AI Products</p>
                   <p className="text-gray-400">
-                    Building and launching AI products with zero funds. Following the $0 to $10K challenge 
-                    methodology - focusing on deliverables, not just features.
+                    Creating production-ready AI solutions that deliver real value. From concept to deployment,
+                    focused on quality over speed.
                   </p>
                 </div>
               </section>
