@@ -92,9 +92,21 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="mb-8"
           >
-            <div className="w-28 h-28 mx-auto rounded-full bg-gradient-to-br from-[#00ff88] via-[#00cc6a] to-[#059669] flex items-center justify-center text-4xl font-bold text-white shadow-2xl shadow-[#00ff88]/30 relative">
-              <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00ff88] to-[#00cc6a] animate-pulse opacity-20" />
-              <span className="relative">RR</span>
+            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-[#00ff88]/30 shadow-2xl shadow-[#00ff88]/20 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00ff88] via-[#00cc6a] to-[#059669] animate-pulse opacity-20" />
+              <img 
+                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=300&h=300&fit=crop&crop=faces" 
+                alt="AI Avatar" 
+                className="w-full h-full object-cover relative z-10"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 to-transparent z-20" />
+              <div className="absolute bottom-2 right-2 z-30">
+                <div className="w-6 h-6 bg-[#00ff88] rounded-full flex items-center justify-center animate-pulse">
+                  <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+              </div>
             </div>
           </motion.div>
           
