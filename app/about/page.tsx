@@ -32,8 +32,6 @@ export default function About() {
                   </div>
                 </div>
               </div>
-                </div>
-              </div>
               <div className="text-center md:text-left">
                 <h1 className="text-3xl font-bold text-white mb-1">Rousan Raahat</h1>
                 <p className="text-[#00ff88]">Solo Founder & AI Developer</p>
