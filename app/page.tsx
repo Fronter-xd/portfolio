@@ -104,7 +104,7 @@ export default function Home() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 max-w-xl mx-auto mb-2 font-medium">
-            AI Developer & Software Engineer
+            Solo Founder & AI Developer
           </p>
           
           <p className="text-gray-500 max-w-lg mx-auto mb-10 leading-relaxed">
