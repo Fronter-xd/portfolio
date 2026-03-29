@@ -93,13 +93,12 @@ export default function Home() {
             className="mb-8"
           >
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-[#00ff88]/40 shadow-2xl shadow-[#00ff88]/20 relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#00ff88]/20 via-[#059669]/10 to-transparent z-20" />
               <img 
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300&h=300&fit=crop&crop=faces" 
-                alt="Rousan Raahat - Developer" 
+                src="https://media.licdn.com/dms/image/v2/C5603AQG1PJFsC7xmvg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1652711796874?e=1776297600&v=beta&t=V1MSrwFAg3yYgiGnre_M-15mXI1s8aQJrtVWqSfas0M" 
+                alt="Rousan Raahat" 
                 className="w-full h-full object-cover relative z-10"
               />
-              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#0a0a0a] to-transparent z-20" />
+              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent z-20" />
               <div className="absolute bottom-2 right-2 z-30">
                 <div className="w-6 h-6 bg-[#00ff88] rounded-full flex items-center justify-center animate-pulse shadow-lg shadow-[#00ff88]/50">
                   <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 24 24">
